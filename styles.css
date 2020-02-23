@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Neon';
+    src: url('font/neon-webfont.woff') format('woff'),
+        url("font/neon-webfont.woff2")format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Neon', sans-serif;
+    font-size: 6rem;
+    opacity: 0.8;
+    text-shadow: 0px 0px 10px #c63a6f, 0px 0px 10px orange, 0px 0px 10px yellow, 0px 0px 10px red, 0px 0px 10px #5F4B8B, 0px 0px 10px #F4512C, 0px 0px 10px #7FCDCD;
+    color: white;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Neon', sans-serif;
+    font-size: 4rem;
+    opacity: 0.8;
+    text-shadow: 0px 0px 10px #c63a6f, 0px 0px 10px orange, 0px 0px 10px yellow, 0px 0px 10px red, 0px 0px 10px #5F4B8B, 0px 0px 10px #F4512C, 0px 0px 10px #7FCDCD;
+    color: white;
+}
+
+.home > .megatitre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.titre {
+    animation: tracking-in-expand .7s cubic-bezier(.215, .61, .355, 1.000) both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -.5em;
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.sommaire {
+    font-size: 30px;
+}
+
+.sommaire > a {
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/*Page d'accueil*/
+.home {
+    height: 100vh;
+    background-color: #FF5536;
+    background-image: linear-gradient( rgba(255,255,255,0.6), rgba(255,255,255,0.3));
+    /*#FF9642 #FF5536*/
+    transition: 1s;
+}
+
+.home:hover {
+    background-color: #91BEFF;
+}
+
+.navigation {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 13px;
+    z-index: 3;
+    top: 20%;
+}
+
+.sommaire {
+    list-style: none;
+    position: fixed;
+}
+
+
+.section {
+    height: 100vh;
+    width: 100%;
+    /*display: block;*/
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: 0px 0px 10px #c63a6f, 0px 0px 10px orange, 0px 0px 10px yellow, 0px 0px 10px red, 0px 0px 10px #5F4B8B, 0px 0px 10px #F4512C, 0px 0px 10px #7FCDCD;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section p {
+    flex: 0.5;
+    margin: 25px;
+    align-items: center;
+    font-size: 35px;
+    margin-left: 45px;
+}
+
+.chanson {
+    background-image: url(img/Sexion-d-Assaut-compress2.jpg);
+    background-size: cover;
+    filter: grayscale(1);
+    transition: filter 0.5s;
+}
+
+.chanson:hover {
+    /*    transition: filter 0.5s;*/
+    filter: grayscale(0);
+}
+
+.couleur {
+    background-color: black;
+    transition: 0.8s;
+}
+
+.orange {
+    color: black;
+    text-shadow: none;
+    transition: 0.8s;
+}
+
+.couleur:hover .orange {
+    color: white;
+    text-shadow: 0px 0px 10px #c63a6f, 0px 0px 10px orange, 0px 0px 10px yellow, 0px 0px 10px red, 0px 0px 10px #5F4B8B, 0px 0px 10px #F4512C, 0px 0px 10px #7FCDCD;
+}
+
+
+
+.couleur:hover {
+    background-color: #ffa500;
+}
+
+.chaussure {
+    background-image: url(img/airmax.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.meme {
+    background-image: url(img/succes_kid_v2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.ville {
+    background-image: url(img/paris.jpg);
+    background-size: cover;
+}
+
+.elephant {
+    background-image: url(img/elephant.jpg);
+    background-size: cover;
+    transition: ease .5s;
+}
+
+.elephant:hover {
+    background-image: url(img/elephant_anim.gif);
+    background-size: cover;
+}
+
+.bibliotheque {
+    background-image: url(img/wikipedia.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-filter: saturate(20%);
+    filter: saturate(20%);
+    transition: filter 0.5s;
+}
+
+.bibliotheque:hover {
+    filter: none;
+}
+
+.wikipedia {
+    background-color: #800000;
+}
+
+
+#progression {
+    position: fixed;
+    top: 0;
+    height: 3px;
+    width: 100%;
+    background:
+        /*#3e9bb7*/
+        -webkit-gradient(linear, left top, left bottom, from(#FDD563), to(#FD68C4));
+    background:
+        /*#3e9bb7linear-gradient(#FDD563,#FD68C4)*/
+        #D684FF;
+    z-index: 200;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#barre {
+    position: absolute;
+    top: 0;
+    background-color: #8878FF;
+    width: 0%;
+    height: 100%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.progression-titre {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    padding: 5px 0;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.megatitre {
+    text-align: center;
+}
+
+
+.middle {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+}
+
+.mouse {
+    width: 25px;
+    height: 60px;
+    border: 6px solid darkkhaki;
+    border-radius: 60px;
+
+
+}
+
+.mouse::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 30px;
+    background: orange;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    -webkit-animation: mouse 2s infinite;
+    animation: mouse 2s infinite;
+
+}
+
+@-webkit-keyframes mouse {
+    from {
+        opacity: 1;
+        top: 8px;
+    }
+
+    to {
+        opacity: 0;
+        top: 55px;
+    }
+}
+
+@keyframes mouse {
+    from {
+        opacity: 1;
+        top: 8px;
+    }
+
+    to {
+        opacity: 0;
+        top: 55px;
+    }
+}

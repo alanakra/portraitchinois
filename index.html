@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Mon portrait chinois dans le cadre de mon premier projet web en DUT MMI">
+    <meta name="author" content="Alan Akra">
+    <title>Alan Akra | Mon portrait chinois</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <div id="progression">
+        <div id="barre"></div>
+        <div class="progression-titre"></div>
+    </div>
+
+    <div class="home" id="accueil">
+        <div class="megatitre">
+            <h1 class="titre">Mon portrait chinois</h1>
+            <h2 class="titre">Alan Akra</h2>
+        </div>
+
+        <div class="navigation">
+            <nav>
+                <ul class="sommaire">
+                    <a href="#accueil">
+                        <li>🏠</li>
+                    </a>
+                    <a href="#part1">
+                        <li>🎶</li>
+                    </a>
+                    <a href="#part2">
+                        <li>🎨</li>
+                    </a>
+                    <a href="#part3">
+                        <li>👟</li>
+                    </a>
+                    <a href="#part4">
+                        <li>😂</li>
+                    </a>
+                    <a href="#partville">
+                        <li>🏙️</li>
+                    </a>
+                    <a href="#partelephant">
+                        <li>🐘</li>
+                    </a>
+
+                    <a href="#photowiki">
+                        <li>🌐</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        
+                <div class="middle">
+            <div class="mouse">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="section chanson" id="part1">
+        <p>Si j’étais une 🎶 je serais...</p>
+        <p>« Désolé » de la sexion d’assaut parce que les thèmes évoquées par cette chanson tel que le travail, la détermination ou la fierté sont des éléments de vie récurrents prônés par ce groupe. </p>
+    </div>
+    <div class="section couleur" id="part2">
+        <p>Si j'étais une 🎨 je serais...</p>
+        <p class="orange">le orange <code>#ffa500</code>, car cette couleur est tonifiante, influant sur la bonne humeur. Elle invite à l’action, donne l’envie ainsi que l’espoir.
+        </p>
+    </div>
+    <div class="section chaussure" id="part3">
+        <p>
+            Si j’étais une paire de 👟, je serais...</p>
+        <p>Les Air Max parce qu’elles ont su évoluer au fil du temps et ont inspirés le milieu du sneaker. La bulle, la TN, les requins... les ont rendus intemporelles.
+        </p>
+    </div>
+    <div class="section meme" id="part4">
+        <p>Si j'étais un même 😂, je serais... </p>
+        <p>"Sucess kid" car il représente à mes yeux la détermination avec le poing serré et dans un second temps l'insouciance.</p>
+    </div>
+    <div class="section ville" id="partville">
+        <p>Si j'étais une 🏙️, je serais...<br>
+            <br>
+            Paris 🔴🔵, car j'aime son architecture, Notre-Dame, le Parc des princes, son histoire inspirant des millions de visiteurs chaque année. <br>
+            <q>La banlieue influence Paname,
+                Paname influence le monde.</q></p>
+    </div>
+    <div class="section elephant" id="partelephant">
+        <p>Si j'étais un animal je serais...</p>
+        <p>Un éléphant 🐘 car il représente à mes yeux la sagesse et la stabilité.</p>
+    </div>
+
+    <div class="section bibliotheque" id="photowiki">
+        <p>Si j'étais un site web je serais...</p>
+    </div>
+
+    <div class="section wikipedia">
+
+        <p> <code> Wikipedia.org</code> que je considère comme la meilleure médiathèque au monde, non seulement pour la quantité gigantesque de données qu'elle héberge avec plus de 2 millions d'articles rédigés en français, mais aussi pour son aspect collaboratif qui le rend ainsi évolutif. </p>
+    </div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        console.log("Dédicace à Robin Llopis et Alexis#");
+        var $ = jQuery.noConflict();
+        $(window).scroll(function() {
+
+            //Calcule la hauteur de la page entière
+            var h = $(document).height();
+            //Détermine la position de la page
+            var s = $(window).scrollTop();
+            //Calcule la hauteur de page visible
+            var w = $(window).height();
+
+            //Formule mathématique pour calculer p le pourcentage de progression
+            var t = (s / h) * w;
+            var p = Math.ceil((s + t) / h * 110) + 1;
+
+            //Agrandit la barre de progression en fonction de p
+            $('#barre').width(p + '%');
+            if (s > 150) {
+                //Modification CSS si l'utilisateur a scrollé plus de 150px
+                $('#barre').height(8);
+                $('#progression').css('height', '8px');
+                $('.progression-titre').css('opacity', '1');
+                $('.progression-titre').css('display', 'block');
+            } else {
+                //Modification CSS si l'utilisateur a scrollé moins de 150px
+                $('#barre').height(3);
+                $('#progression').css('height', '3px');
+                $('.progression-titre').css('opacity', '0');
+                $('.progression-titre').css('display', 'none');
+            }
+        });
+    })
+
+</script>
+
+
+
+</html>
